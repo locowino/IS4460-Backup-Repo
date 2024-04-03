@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }} Details</title>
+</head>
+<body>
+    <h1>{{ movie.title }} Details</h1>
+    <ul>
+        <li>Description: {{ movie.description }}</li>
+        <li>Director: {{ movie.director }}</li>
+        <li>Release Year: {{ movie.release_year }}</li>
+        <li>Budget: {{ movie.budget }}</li>
+        <li>Runtime: {{ movie.runtime }}</li>
+        <li>Rating: {{ movie.rating }}</li>
+        <li>Genre: {{ movie.genre }}</li>
+    </ul>
+    <a href="{% url 'Movie-edit' id=movie.movie_id %}">Edit Movie</a>
+    <br>
+    <br>
+    <form method="post" action="{% url 'Movie-delete' id=movie.movie_id %}">
+        {% csrf_token %}
+        <input type="submit" value="Delete Movie">
+</body>
+</html>

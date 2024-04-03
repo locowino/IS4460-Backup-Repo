@@ -1,0 +1,48 @@
+<!-- Movie-update  -->
+<title>Movie Update</title>
+<html>
+
+<body>
+    Movie Update:<br>
+    <form method="post">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+
+
+
+<!-- code below is from HW1-->
+
+<Body>
+    
+    <!--
+1. User updates data for one movie.-->
+    <h2> Update Movie <h2>
+            <form method="post" action="{% url 'movie-list' %}">
+
+                Update Classpath for movie image: <br>
+                <input type="text" name="Classpath"> <br><br>
+
+                Update YouTube link for the movie trailer: <br>
+                <input type="text" name="link">
+
+            </form>
+
+            <br><br><br><br>
+            <!--2. Upon submission, user is forwarded to Movie-list page.-->
+            <form method="post" action="{% url 'movie-list' %}">
+                <input type="submit" value="Update Movie">
+            </form>
+</Body>
+
+</html>
+
+
+<!--Roles:
+    Admin-->
+
+<!--HTML form: Upon submitting the form, show movie-list page. -->

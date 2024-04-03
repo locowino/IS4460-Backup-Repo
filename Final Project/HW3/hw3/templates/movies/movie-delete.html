@@ -1,0 +1,19 @@
+<!-- movie_delete-->
+<html>
+
+<head>
+    <link href="http://127.0.0.1:8000/" rel="stylesheet">
+</head>
+
+<body>
+    Movie Delete:<br>
+    <form method="post" class="form">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Delete">
+    </form>
+</body>
+
+</html>
