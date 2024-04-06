@@ -1,0 +1,4 @@
+Add a new view and template to display a list of all users. Ensure that only users with the 'admin' 
+role can access this page.
+Both 'admin' and 'customer' roles should have access to other movie-related pages
+Predefine two users for testing: bsmith (admin) and pjones (customer)

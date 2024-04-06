@@ -1,0 +1,5 @@
+Implement user login and logout using Django's authentication system.
+Utilize Django's built-in views and forms for login and logout functionalities.
+Ensure that the username is stored in the session upon successful login. 
+Implement session checks using Django's mixin to redirect users to the login page if they are not 
+logged in and attempt to access protected pages.
