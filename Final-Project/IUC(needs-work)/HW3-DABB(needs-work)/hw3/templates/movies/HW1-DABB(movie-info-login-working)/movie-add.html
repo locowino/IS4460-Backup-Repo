@@ -2,6 +2,20 @@
 <title>Movie Add</title>
 <html>
 
+
+<body>
+    Movie Add:<br>
+    <form method="post">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Add">
+    </form>
+</body>
+
+<!-- code below is from HW1-->
+
 <body>
     <!--
 1. User adds data for a new movie including adding the classpath for the movie image and youtube embed link for the trailer.-->
@@ -26,5 +40,12 @@
 
 </html>
 
+    
 <!--Roles:
-    Admin-->
+    Admin
+
+works - doesnt move to next file
+-->
+
+
+    

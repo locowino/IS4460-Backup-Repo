@@ -22,30 +22,33 @@
 <!-- code below is from HW1
 Roles: Customer & Admin-->
 
+<!--Roles: Customer & Admin-->
+
 <body>
-    <h1>Ferris Bueller's Day Off</h1>
-     1. User views details of one movie. Show movie image.
-    <a><img src="movie-1.jpg" height="450"></a>
+    <h1>Lovely Runner</h1>
+    <!-- 1. User views details of one movie. Show movie image.-->
+    <a><img src="Lovely_Runner.png" height="450"></a>
     <br>
 
     <!-- 2. Show movie trailer from YouTube.-->
-    <h2><a href="https://www.youtube.com/watch?v=0ZDbKhkLxTs">Movie Trailer</a></h2>
+    <h2><a href="https://youtu.be/1qQnTfCv6Vk?si=_3C4rDDpAIzGzSQK">Movie Trailer</a></h2>
 
     <br><br><br><br>
 
     <!-- 3. Display a link to Movie-update page.
     Add a hyper link in the movie-details.html to point to the movie-update.html page-->
-    <a href="{% url 'movie-update' 1 %}"> Update a movie</a>
+    <a href="movie-update.html"> Update a movie</a>
     <br>
 
     <!-- Movie-delete  -->
     <!-- 4. Display a link to Movie-delete page.-->
-    <form method="post" action="{% url 'movie-delete' 1 %}">
+    <form method="post" action="movie-list.html">
         <input type="submit" value="Delete Movie">
     </form>
 
 </html>
 </body>
+
 </html>
 
 

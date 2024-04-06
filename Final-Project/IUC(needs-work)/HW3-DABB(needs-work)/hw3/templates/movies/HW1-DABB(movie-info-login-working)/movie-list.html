@@ -1,9 +1,21 @@
 <!-- Movie-list  -->
 <title>Movie List</title>
 <html>
+    <body>
 
+        Movies:<br>
+        <u>
+            {% for movie in movies%}
+            <li><a href="{% url 'movie-details' movie.id %}">{{ movie.title }}</a></li>
+            {% endfor %}
+        </u>
+    
+    </body>
+    
+    
+    <!-- code below is from HW1-->
 <body>
-    <h1>Welcome to Cinemark Movies! </h1>
+    <h1>Welcome to KDRAMA! </h1>
     Thanks for signing in!
     <br>
     <a href="movie-login.html"> Back to Sign in page</a>
@@ -20,24 +32,24 @@
 2. Each movie has a link to Movie-details page. The link can be on the image or movie name.-->
     <br><br><br><br>
 
-    <h2>Ferris Bueller's Day Off</h2>
+    <h2>Lovely Runner</h2>
 
 
-    <a href="movie-details.html"><img src="movie-1.jpg" height="200"></a>
+    <a href="movie-details.html"><img src="Lovely_Runner.png" height="200"></a>
     <br>
     <a href="movie-details.html">Movie Details</a>
     
     <br><br><br><br>
 
-    <h2>Jumanji</h2>
-    <a href="movie-details.html"><img src="movie-2.jpg" height="200"></a>
+    <h2>Blood Free</h2>
+    <a href="movie-details.html"><img src="Blood_Free.png" height="200"></a>
     <br>
     <a href="movie-details.html">Movie Details</a>
 
     <br><br><br><br>
 
-    <h2>The Fast and the Furious</h2>
-    <a href="movie-details.html"><img src="movie-3.jpg" height="200"></a>
+    <h2>Alienoid: Return to the Future</h2>
+    <a href="movie-details.html"><img src="Alienoid_2.jpg" height="200"></a>
     <br>
     <a href="movie-details.html">Movie Details</a>
 
@@ -48,3 +60,4 @@
 </body>
 
 </html>
+ <!-- kind of works cant get images to show-->
