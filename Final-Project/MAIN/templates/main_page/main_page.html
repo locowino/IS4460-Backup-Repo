@@ -30,6 +30,8 @@
 					<li><a href="#pricing">PRICING</a></li>
 					<li><a href="#contact">CONTACT</a></li>
 					<li><a href="#shopping">SHOPPING CART</a></li>
+					<li><a href="{% url 'shopping_cart' %}">SHOPPING CART</a></li>
+
 					<li><a href="#User">USER</a></li>
 					<li><form action="{% url 'logout' %}" method="post">
 						{% csrf_token %}
@@ -133,8 +135,8 @@
 				<span class="glyphicon glyphicon-film logo-small"></span>
 				<h4>KDRAMA</h4>
 				<!-- <a href="/customer/main/movie-list.html"><p>View all KDRAMAS</p></a> -->
-				<p><a href="movie-list.html"><p>View all KDRAMAS</p></a></p> 
-
+				<p><a href="{% url 'movie-list' %}">View all KDRAMAS</p></a></p> 
+				
 			
 
 

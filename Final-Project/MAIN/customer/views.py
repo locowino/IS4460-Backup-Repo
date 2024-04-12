@@ -15,4 +15,7 @@ class CustomerListView(LoginRequiredMixin, View):
                       )
 
 def movies_list(request):
-    return render(request, 'templates/movies/movies-list.html')
+    return render(request, 'movies/movie-list.html')
+
+def shopping_cart(request):
+    return render(request, 'shopping_cart/shopping_cart.html')
