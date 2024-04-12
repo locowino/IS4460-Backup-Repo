@@ -8,10 +8,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class CustomerListView(LoginRequiredMixin, View):
 
     def get(self,request):
-        main_page = Main.objects.all()
+        main_pages = Main.objects.all()
         return render(request=request,
                       template_name='main_page/main_page.html',
-                      context = {'main_page':main_page}
+                      context = {'main_pages':main_pages}
                       )
 
 def movies_list(request):
