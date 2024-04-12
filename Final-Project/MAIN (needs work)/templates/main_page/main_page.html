@@ -32,7 +32,10 @@
 					<li><a href="#help">HELP</a></li>
 					<li><a href="#shopping">SHOPPING CART</a></li>
 					<li><a href="#User">USER</a></li>
-					<li><a href="{% url 'logout' %}">LOGOUT</a></li> 
+					<li><form action="{% url 'logout' %}" method="post">
+						{% csrf_token %}
+						<button type="submit">LOGOUT</button>
+					</form>
 
 				</ul>
 			</div>
