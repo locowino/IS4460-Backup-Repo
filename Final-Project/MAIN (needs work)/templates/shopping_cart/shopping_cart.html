@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    
+    <ul id="cart">
+        <!-- Items added to the cart will appear here -->
+    </ul>
+    
+    <p>Total: $<span id="total">0.00</span></p>
+    
+    <a href="checkout.html">Checkout</a>
+
+    <script>
+        // Retrieve cart data from local storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let total = parseFloat(localStorage.getItem('total')) || 0.00;
+
+        function updateCart() {
+            let cartElement = document.getElementById('cart');
+            let totalElement = document.getElementById('total');
+            
+            cartElement.innerHTML = '';
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartElement.appendChild(li);
+            });
+            
+            totalElement.textContent = total.toFixed(2);
+        }
+
+        window.onload = function() {
+            updateCart();
+        };
+    </script>
+</body>
+</html>

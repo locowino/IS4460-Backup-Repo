@@ -207,7 +207,7 @@
 					<div class="panel-footer">
 						<h3>$7.99</h3>
 						<h4>per month</h4>
-						<button class="btn btn-lg">Sign Up</button>
+						<button class="btn btn-lg" onclick="addItem('Basic', 7.99)">Add to cart</button>
 					</div>
 				</div>
 			</div>
@@ -225,7 +225,7 @@
 					<div class="panel-footer">
 						<h3>$11.99</h3>
 						<h4>per month</h4>
-						<button class="btn btn-lg">Sign Up</button>
+						<button class="btn btn-lg" onclick="addItem('Premium', 11.99)"> Add to cart</button>
 					</div>
 				</div>
 			</div>
@@ -243,14 +243,38 @@
 					<div class="panel-footer">
 						<h3>$15.99</h3>
 						<h4>per month</h4>
-						<button class="btn btn-lg">Sign Up</button>
+						<button class="btn btn-lg" onclick="addItem('Exclusive', 15.99)">Add to cart</button>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-
+	<script>
+        let cart = [];
+        let total = 0.00;
+        
+        function addItem(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            total += itemPrice;
+            updateCart();
+        }
+        
+        function updateCart() {
+            let cartElement = document.getElementById('cart');
+            let totalElement = document.getElementById('total');
+            
+            cartElement.innerHTML = '';
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartElement.appendChild(li);
+            });
+            
+            totalElement.textContent = total.toFixed(2);
+        }
+    </script>
 
 	<!-- Contact -->
 	<div id="contact" class="container-fluid bg-grey">
