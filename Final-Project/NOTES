@@ -10,3 +10,17 @@ Password: drama.com!
 Loc Testing Commit through VSCode
 
 Testing Git Pull/Push
+
+
+accounts/login 
+- page for user to sign in to
+
+customer/main/
+- page for user to view main page 
+
+Logout button terminates session and sends user back to login page 
+
+
+customer/movie_list
+- page for user to view movies 
+STILL WORKING ON

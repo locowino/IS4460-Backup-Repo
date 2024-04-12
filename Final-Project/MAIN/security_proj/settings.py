@@ -107,7 +107,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+# https://docs.djangoproject.com/en/50/howto/static-files/
 
 STATIC_URL = 'static/'
 
@@ -123,3 +123,4 @@ AUTHENTICATION_BACKENDS = [
 
 LOGIN_REDIRECT_URL = "/customer/main"
 LOGOUT_REDIRECT_URL = "/accounts/login"
+MOVIE_REDIRECT_URL = "/customer/movie-list"
