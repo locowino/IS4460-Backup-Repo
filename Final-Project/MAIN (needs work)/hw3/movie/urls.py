@@ -14,3 +14,18 @@ urlpatterns = [
     path('movies/<int:pk>/', MovieDetailView.as_view(),name='movie-details'),
     path('customer-list/', views.customer_list, name='customer-list'),
 ]
+
+from django.contrib import admin
+from django.urls import include, path
+from rest_framework.authtoken.views import obtain_auth_token
+from django.urls import path
+from movie.views import login_view
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path ('movie/', include('movie.urls')),
+    path('api/', include('movie.urls')), 
+    path('login/', login_view, name='login'),
+
+]

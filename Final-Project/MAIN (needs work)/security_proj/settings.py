@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'customer',
+    #'movie',
+    #'rest_framework',
+    #'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'security_proj.urls'
+ROOT_URLCONF = 'security.urls'
 
 TEMPLATES = [
     {
@@ -69,8 +72,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'security_proj.wsgi.application'
-
+WSGI_APPLICATION = 'security.wsgi.application'
+#'movie.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -128,5 +131,5 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-LOGIN_REDIRECT_URL = "/customer/list"
+LOGIN_REDIRECT_URL = "/main-page"
 LOGOUT_REDIRECT_URL = "/accounts/login"
