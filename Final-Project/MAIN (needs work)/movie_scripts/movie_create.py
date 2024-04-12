@@ -1,7 +1,7 @@
 import requests
 import json
 
-api_url = 'http://localhost:8001/movie/create_api/'
+api_url = 'http://127.0.0.1:8000/movie/create_api/'
 
 movie_data = {
     "title" : "Star Wars",

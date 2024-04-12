@@ -3,7 +3,7 @@ import requests
 id=1
 # I created movies and deleted them so ther is id 2-7 
 # Check the database for further understanding
-api_url = f'http://localhost:8001/movie/create_api/{id}'
+api_url = f'http://127.0.0.1:8000/movie/create_api/{id}'
 
 response = requests.get(api_url)
 

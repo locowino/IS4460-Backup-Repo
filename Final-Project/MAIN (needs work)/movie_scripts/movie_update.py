@@ -3,7 +3,7 @@ import json
 
 id = 8
 
-api_url = f'http://localhost:8001/movie/create_api/{id}/'
+api_url = f'http://127.0.0.1:8000/movie/create_api/{id}/'
 
 movie_data = {
     "title" : "Dune",
