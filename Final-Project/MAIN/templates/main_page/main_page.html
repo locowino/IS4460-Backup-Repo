@@ -304,10 +304,16 @@
 					rows="5"></textarea><br>
 				<div class="row">
 					<div class="col-sm-12 form-group">
-						<button class="btn btn-default pull-right" type="submit">Send</button>
+						<button class="btn btn-default pull-right" type="submit" onclick = "showMessage()">Send</button>
 					</div>
 				</div>
 			</form>
+
+			<script>
+				function showMessage() {
+					alert("Submitted, thank you!");
+				}
+			</script>
 			</div>
 		</div>
 	</div>
