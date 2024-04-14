@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
-from .models import Customer
+from .models import Customer, Order
+from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your class based views here.
@@ -22,3 +23,20 @@ def shopping_cart(request):
 
 def checkout(request):
     return render(request, 'shopping_cart/checkout.html')
+
+def place_order(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        payment_method = request.POST.get('payment')
+        
+        # Save the form data to the database
+        Order.objects.create(name=name, email=email, address=address, payment_method=payment_method)
+        
+        # Redirect to a success page or any other page you want
+        return HttpResponseRedirect('/customer/main/')#('/thank-you/')  
+    else:
+        # Handle GET request if needed
+        pass
+
