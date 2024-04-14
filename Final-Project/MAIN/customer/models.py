@@ -9,3 +9,8 @@ class Order(models.Model):
     email = models.EmailField()
     address = models.TextField()
     payment_method = models.CharField(max_length =50)
+
+class movieRequest(models.Model):
+    name = models.CharField(max_length = 50)
+    email = models.EmailField()
+    comments = models.TextField()

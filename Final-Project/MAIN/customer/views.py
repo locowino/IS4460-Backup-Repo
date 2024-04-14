@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import Customer, Order
+from .models import Customer, Order, movieRequest
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -35,8 +35,22 @@ def place_order(request):
         Order.objects.create(name=name, email=email, address=address, payment_method=payment_method)
         
         # Redirect to a success page or any other page you want
-        return HttpResponseRedirect('/customer/main/')#('/thank-you/')  
+        return HttpResponseRedirect('/customer/main/') 
     else:
         # Handle GET request if needed
         pass
 
+
+def movie_request(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        comments = request.POST.get('comments')
+  
+        
+        # Save the form data to the database
+        movieRequest.objects.create(name=name, email=email, comments = comments)
+        return HttpResponseRedirect('/customer/main/') 
+    else:
+        pass
+       
