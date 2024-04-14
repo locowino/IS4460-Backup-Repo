@@ -12,6 +12,8 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page= '/accounts/login/'), name = 'logout'),
     path('shopping-cart/', views.shopping_cart, name='shopping_cart'),
     path('movie-list/', views.movies_list, name='movie-list'),
+    path('shopping-cart/checkout/', views.checkout, name= 'checkout'),
+    
     #customer/main/movie-list.html
 ]
 

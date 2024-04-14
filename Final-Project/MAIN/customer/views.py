@@ -19,3 +19,6 @@ def movies_list(request):
 
 def shopping_cart(request):
     return render(request, 'shopping_cart/shopping_cart.html')
+
+def checkout(request):
+    return render(request, 'shopping_cart/checkout.html')
