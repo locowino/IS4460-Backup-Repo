@@ -15,9 +15,9 @@ urlpatterns = [
     path('shopping-cart/checkout/', views.checkout, name= 'checkout'),
 
 
-    path('movie-update/', views.MovieUpdateView.as_view(), name='movie-update'),
+    path('movie-list/movie-update', views.MovieUpdateView.as_view(), name='movie-update'),
     path('movie-delete/', views.MovieDeleteView.as_view(), name='movie-delete'),
-    path('movie-update/', views.MovieDetails.as_view(), name='movie-details'),
+    path('movie-list/movie-details', views.MovieDetails.as_view(), name='movie-details'),
     
     #customer/main/movie-list.html
 ]
