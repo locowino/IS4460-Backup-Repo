@@ -13,11 +13,11 @@ urlpatterns = [
     path('shopping-cart/', views.shopping_cart, name='shopping_cart'),
     path('movie-list/', views.movies_list, name='movie-list'),
     path('shopping-cart/checkout/', views.checkout, name= 'checkout'),
+    path('movie-list/movie-details', views.MovieDetails.as_view(), name='movie-details'),
 
 
     path('movie-list/movie-update', views.MovieUpdateView.as_view(), name='movie-update'),
-    path('movie-delete/', views.MovieDeleteView.as_view(), name='movie-delete'),
-    path('movie-list/movie-details', views.MovieDetails.as_view(), name='movie-details'),
+    path('movie-list/movie-delete', views.MovieDeleteView.as_view(), name='movie-delete'),
     
     #customer/main/movie-list.html
 ]
