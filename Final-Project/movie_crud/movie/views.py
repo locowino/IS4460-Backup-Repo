@@ -4,8 +4,8 @@ from .models import Movie
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework import generics
 from django.urls import reverse
-from .forms import MovieForm
-from .serializers import MovieSerializer
+from ...MAIN.customer.forms import MovieForm
+from ...MAIN.customer.serializers import MovieSerializer
 from django.contrib.auth.forms import AuthenticationForm
 from django.urls import reverse_lazy
 from django.views.generic import UpdateView

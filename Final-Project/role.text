@@ -1,3 +1,0 @@
-Create a `Role` model in your database to define user roles, such as customer and admin.
-Utilize Django's groups and permissions to manage role-based access control. 
-Create an unauthorized page to redirect users without proper authorization.
